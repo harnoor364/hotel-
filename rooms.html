@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rooms &amp; Prices — Hotel Kabir</title>
+  <meta name="description" content="Compare rooms at Hotel Kabir: Standard, Deluxe, Executive and Family Suite. See sizes, beds, amenities and nightly rates, and estimate your total with GST.">
+  <meta name="theme-color" content="#22140f">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="rooms">
+  <div id="site-header"></div>
+  <script src="js/site.js"></script>
+
+  <main id="main">
+    <section class="page-hero">
+      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1400&q=60" srcset="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=60 800w, https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1400&q=60 1400w" sizes="100vw" width="1400" height="933" alt="" fetchpriority="high">
+      <div class="container hero-in">
+        <p class="eyebrow">Stay with us</p>
+        <h1>Rooms &amp; Prices</h1>
+        <p>Four ways to stay, all with air conditioning, fast Wi-Fi and 24-hour room service. Rates are per room, per night, before 12% GST.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="room-list" id="roomList"></div>
+      </div>
+    </section>
+
+    <section class="section bg-cream" id="calculator">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Price calculator</p>
+          <h2>What will my stay cost?</h2>
+          <p>Choose a room and your dates to see the full price, tax included. No surprises at checkout.</p>
+        </div>
+
+        <div class="calc" data-reveal>
+          <form class="calc-form" id="calcForm" novalidate>
+            <div class="field">
+              <label for="calc-room">Room</label>
+              <select class="input" id="calc-room"></select>
+            </div>
+            <div class="form-row cols-2">
+              <div class="field">
+                <label for="calc-in">Check-in</label>
+                <input class="input" type="date" id="calc-in">
+              </div>
+              <div class="field">
+                <label for="calc-out">Check-out</label>
+                <input class="input" type="date" id="calc-out">
+              </div>
+            </div>
+            <div class="field">
+              <label for="calc-guests">Guests</label>
+              <select class="input" id="calc-guests">
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+              </select>
+            </div>
+            <p class="form-error" id="calcError" role="alert"></p>
+          </form>
+
+          <div class="calc-result" aria-live="polite">
+            <p class="eyebrow">Your estimate</p>
+            <h3 id="calcRoomName">Deluxe Room</h3>
+            <ul class="breakdown" id="calcBreakdown"></ul>
+            <p class="calc-note">Indicative demo prices. Final rates are confirmed at booking.</p>
+            <a class="btn btn-gold btn-block" id="calcBook" href="booking.html">Book These Dates</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=1400&q=55" width="1400" height="933" alt="">
+      <div class="container" data-reveal>
+        <p class="eyebrow center">Not sure which room?</p>
+        <h2>We&rsquo;ll help you choose</h2>
+        <p>Tell us who&rsquo;s travelling and for how long, and we&rsquo;ll suggest the room that fits.</p>
+        <div class="cta-actions">
+          <a class="btn btn-gold btn-lg" href="booking.html">Book Now</a>
+          <button class="btn btn-outline-light btn-lg" data-contact="call">Call Us</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/rooms.js" defer></script>
+</body>
+</html>

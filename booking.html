@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Book Your Stay — Hotel Kabir</title>
+  <meta name="description" content="Book a room at Hotel Kabir in three quick steps. Choose your dates and room, add your details and see the full price with GST before you confirm.">
+  <meta name="theme-color" content="#22140f">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="booking">
+  <div id="site-header"></div>
+  <script src="js/site.js"></script>
+
+  <main id="main">
+    <section class="page-hero">
+      <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1400&q=60" width="1400" height="933" alt="" fetchpriority="high">
+      <div class="container hero-in">
+        <p class="eyebrow">Reservations</p>
+        <h1>Book Your Stay</h1>
+        <p>Three short steps. You&rsquo;ll see the full price, tax included, before you confirm.</p>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container booking-layout">
+        <div class="panel" id="bookingPanel">
+          <ol class="steps" id="stepper" aria-label="Booking progress">
+            <li class="is-active">Stay</li>
+            <li>Your details</li>
+            <li>Review</li>
+          </ol>
+
+          <form id="bookingForm" novalidate>
+            <!-- Step 1 -->
+            <div class="step is-active" data-step="1">
+              <h2>When are you coming?</h2>
+              <p class="step-intro">Pick your dates and number of guests, then choose a room.</p>
+              <div class="form-row cols-2">
+                <div class="field" id="f-checkin">
+                  <label for="checkin">Check-in</label>
+                  <input class="input" type="date" id="checkin" name="checkin" required>
+                  <p class="field-error"></p>
+                </div>
+                <div class="field" id="f-checkout">
+                  <label for="checkout">Check-out</label>
+                  <input class="input" type="date" id="checkout" name="checkout" required>
+                  <p class="field-error"></p>
+                </div>
+              </div>
+              <div class="field" id="f-guests">
+                <label for="guests">Guests</label>
+                <select class="input" id="guests" name="guests">
+                  <option value="1">1 Guest</option>
+                  <option value="2" selected>2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                </select>
+                <p class="field-error"></p>
+              </div>
+              <div class="field" id="f-room">
+                <span class="label" id="roomLabel">Room type</span>
+                <div class="room-options" id="roomOptions" role="radiogroup" aria-labelledby="roomLabel"></div>
+                <p class="field-error"></p>
+              </div>
+              <div class="step-actions">
+                <button type="button" class="btn btn-maroon" data-next>Continue</button>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step" data-step="2">
+              <h2>Who&rsquo;s staying?</h2>
+              <p class="step-intro">We&rsquo;ll use these details for your reservation only.</p>
+              <div class="field" id="f-name">
+                <label for="name">Full name</label>
+                <input class="input" type="text" id="name" name="name" autocomplete="name" required>
+                <p class="field-error"></p>
+              </div>
+              <div class="form-row cols-2">
+                <div class="field" id="f-phone">
+                  <label for="phone">Mobile number</label>
+                  <input class="input" type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="10-digit mobile number" required>
+                  <p class="field-error"></p>
+                </div>
+                <div class="field" id="f-email">
+                  <label for="email">Email</label>
+                  <input class="input" type="email" id="email" name="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+                  <p class="field-error"></p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="requests">Special requests <span class="optional">(optional)</span></label>
+                <textarea class="input" id="requests" name="requests" maxlength="500" placeholder="Early check-in, extra pillows, an airport pickup&hellip;"></textarea>
+              </div>
+              <div class="step-actions">
+                <button type="button" class="btn btn-ghost" data-back>Back</button>
+                <button type="button" class="btn btn-maroon" data-next>Review Booking</button>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step light" data-step="3">
+              <h2>Review your booking</h2>
+              <p class="step-intro">Please check everything looks right.</p>
+              <div class="review-grid" id="reviewGrid"></div>
+              <ul class="breakdown" id="reviewBreakdown"></ul>
+              <div class="step-actions">
+                <button type="button" class="btn btn-ghost" data-back>Back</button>
+                <button type="submit" class="btn btn-maroon">Confirm Booking</button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Success -->
+          <div class="success light" id="successScreen" hidden tabindex="-1">
+            <div class="success-mark"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+            <p class="eyebrow center">Booking confirmed</p>
+            <h2>See you soon, <span id="successName">guest</span>.</h2>
+            <p>Your booking ID</p>
+            <div class="booking-id" id="bookingId">HK-0000</div><br>
+            <p class="demo-note"><strong>This is a demo &mdash; no payment taken.</strong> No details have been sent or stored anywhere.</p>
+            <ul class="breakdown" id="successBreakdown"></ul>
+            <div class="success-actions">
+              <a class="btn btn-maroon" href="index.html">Back to Home</a>
+              <a class="btn btn-ghost" href="booking.html">Make Another Booking</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="summary" aria-live="polite" aria-label="Price summary">
+          <div class="summary-media"><img id="sumImg" src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=700&q=65" width="700" height="394" alt=""></div>
+          <div class="summary-body">
+            <p class="eyebrow">Your stay</p>
+            <h3 id="sumRoom">Choose a room</h3>
+            <p class="summary-dates" id="sumDates">Select your dates</p>
+            <ul class="breakdown" id="sumBreakdown"></ul>
+            <p class="summary-note">Prices are demo placeholders. Pay at the hotel &mdash; nothing is charged online.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/booking.js" defer></script>
+</body>
+</html>

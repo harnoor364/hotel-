@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contact — Hotel Kabir</title>
+  <meta name="description" content="Get in touch with Hotel Kabir. Send an enquiry about rooms, group stays or events and our team will get back to you.">
+  <meta name="theme-color" content="#22140f">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+  <div id="site-header"></div>
+  <script src="js/site.js"></script>
+
+  <main id="main">
+    <section class="page-hero">
+      <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1400&q=60" width="1400" height="933" alt="" fetchpriority="high">
+      <div class="container hero-in">
+        <p class="eyebrow">Get in touch</p>
+        <h1>Contact Us</h1>
+        <p>Questions about a room, a group booking or a family function? We&rsquo;re happy to help.</p>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="contact-cta" data-reveal>
+          <button class="contact-big call" data-contact="call">
+            <span class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+            <span><strong>Call Us</strong><small>Phone number coming soon</small></span>
+          </button>
+          <button class="contact-big wa" data-contact="whatsapp">
+            <span class="ic"><svg viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.8c0 3.3 2.9 6.2 6.2 6.2l1.3-1.6-2-1-1 .8a4.4 4.4 0 0 1-2.7-2.7l.8-1-1-2z"/></svg></span>
+            <span><strong>WhatsApp Us</strong><small>+91 XXXXX XXXXX</small></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="enquiry" style="padding-top:24px">
+      <div class="container contact-grid">
+        <div class="panel" data-reveal>
+          <div id="enquiryWrap">
+            <p class="eyebrow">Enquiry</p>
+            <h2>Send us a message</h2>
+            <p class="step-intro">We usually reply within a few hours.</p>
+            <form id="enquiryForm" novalidate>
+              <div class="form-row cols-2">
+                <div class="field" id="e-name">
+                  <label for="en-name">Your name</label>
+                  <input class="input" id="en-name" name="name" autocomplete="name" required>
+                  <p class="field-error"></p>
+                </div>
+                <div class="field" id="e-contact">
+                  <label for="en-contact">Phone or email</label>
+                  <input class="input" id="en-contact" name="contact" autocomplete="email" required>
+                  <p class="field-error"></p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="en-topic">Enquiry about</label>
+                <select class="input" id="en-topic" name="topic">
+                  <option>Room booking</option>
+                  <option>Group or family stay</option>
+                  <option>Events &amp; functions</option>
+                  <option>Restaurant</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+              <div class="field" id="e-message">
+                <label for="en-message">Message</label>
+                <textarea class="input" id="en-message" name="message" maxlength="1000" required></textarea>
+                <p class="field-error"></p>
+              </div>
+              <button class="btn btn-maroon" type="submit">Send Enquiry</button>
+            </form>
+          </div>
+          <div class="thanks" id="enquiryThanks" hidden tabindex="-1">
+            <div class="success-mark"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+            <h3>Thank you, <span id="thanksName"></span>.</h3>
+            <p>Your message has been noted and our team will be in touch soon.<br><small>(Demo only &mdash; nothing was sent.)</small></p>
+            <button class="btn btn-ghost" id="enquiryAgain" type="button">Send another message</button>
+          </div>
+        </div>
+
+        <div data-reveal style="--d:.1s">
+          <ul class="info-list">
+            <li><span>Phone</span>Phone number coming soon</li>
+            <li><span>WhatsApp</span>+91 XXXXX XXXXX</li>
+            <li><span>Email</span>Email address coming soon</li>
+            <li><span>Address</span>Address to be announced</li>
+            <li><span>Front desk</span>Open 24 hours, every day</li>
+          </ul>
+          <div class="map-placeholder" role="img" aria-label="Map placeholder: location will be added later">
+            <svg class="roads" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M-10 210 C 90 190, 150 120, 410 140" fill="none" stroke="#fff" stroke-width="14"/>
+              <path d="M120 -10 C 140 90, 170 200, 150 310" fill="none" stroke="#fff" stroke-width="10"/>
+              <path d="M260 -10 L 300 310" fill="none" stroke="#fff" stroke-width="7"/>
+              <path d="M-10 70 L 410 40" fill="none" stroke="#fff" stroke-width="6"/>
+              <circle cx="330" cy="230" r="34" fill="#d9e3c9" opacity=".7"/>
+            </svg>
+            <div class="map-inner">
+              <div class="map-pin"></div>
+              <strong>Map coming soon</strong>
+              <small>Our location will be added here.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/contact.js" defer></script>
+</body>
+</html>

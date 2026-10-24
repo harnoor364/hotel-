@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hotel Kabir — Boutique Rooms, Warm Hospitality</title>
+  <meta name="description" content="Hotel Kabir is a boutique hotel with thoughtfully designed rooms, an all-day restaurant and a 24/7 front desk. Check availability and book your stay online.">
+  <meta name="theme-color" content="#22140f">
+  <meta property="og:title" content="Hotel Kabir">
+  <meta property="og:description" content="Unhurried rooms, honest food and a front desk that remembers your name.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+  <script src="js/site.js"></script>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-label="Welcome">
+      <div class="hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1400&q=70"
+          srcset="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=750&q=65 750w,
+                  https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1400&q=70 1400w,
+                  https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=2000&q=70 2000w"
+          sizes="100vw" width="1600" height="1067" alt="A softly lit guest room with a made bed and warm lamps" fetchpriority="high">
+      </div>
+      <div class="container hero-content">
+        <div class="hero-in">
+          <h1>Hotel Kabir</h1>
+          <p class="hero-sub">A boutique stay for slow mornings &amp; easy evenings</p>
+        </div>
+
+        <form class="availability" id="availabilityForm" action="booking.html" method="get" novalidate data-reveal style="--d:.45s">
+          <div class="field">
+            <label for="av-checkin">Check-in</label>
+            <input class="input" type="date" id="av-checkin" name="checkin" required>
+          </div>
+          <div class="field">
+            <label for="av-checkout">Check-out</label>
+            <input class="input" type="date" id="av-checkout" name="checkout" required>
+          </div>
+          <div class="field field-guests">
+            <label for="av-guests">Guests</label>
+            <select class="input" id="av-guests" name="guests">
+              <option value="1">1 Guest</option>
+              <option value="2" selected>2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+            </select>
+          </div>
+          <button class="btn btn-maroon" type="submit">Check Availability</button>
+          <p class="form-error" id="av-error" role="alert"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-media" data-reveal>
+          <div class="frame">
+            <img loading="lazy" decoding="async"
+              src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=900&q=70"
+              srcset="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=600&q=65 600w,
+                      https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&w=900&q=70 900w"
+              sizes="(min-width: 900px) 45vw, 100vw" width="900" height="1125" alt="A warm, lamp-lit hotel interior">
+          </div>
+          <div class="frame frame-small">
+            <img loading="lazy" decoding="async"
+              src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=500&q=65"
+              width="500" height="500" alt="Breakfast served at the table">
+          </div>
+        </div>
+        <div class="about-copy" data-reveal style="--d:.1s">
+          <p class="eyebrow">About the hotel</p>
+          <h2>A small hotel that pays <em class="accent">attention</em>.</h2>
+          <p class="lead">Hotel Kabir was built around a simple idea: the details you notice are the ones that make a stay.</p>
+          <p>Crisp linen and blackout curtains. Water pressure that actually works. A breakfast with fresh parathas and filter coffee, served until late morning because holidays shouldn&rsquo;t start with an alarm.</p>
+          <p>Whether you&rsquo;re here for a wedding in the family, a week of meetings or a few days away, our team takes care of the small things so you don&rsquo;t have to think about them.</p>
+          <div class="stats">
+            <div class="stat"><strong>4</strong><span>Room types to choose from</span></div>
+            <div class="stat"><strong>24/7</strong><span>Front desk &amp; room service</span></div>
+            <div class="stat"><strong>12</strong><span>Hour check-in window</span></div>
+          </div>
+          <a class="link-arrow" href="rooms.html">Explore the rooms</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured rooms -->
+    <section class="section bg-cream" id="rooms">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <p class="eyebrow center">Rooms &amp; suites</p>
+          <h2>Rooms made for resting</h2>
+          <p>Four room types, each with air conditioning, fast Wi-Fi and the kind of bed you&rsquo;ll miss when you leave.</p>
+        </div>
+
+        <div class="room-cards swipe" id="featuredRooms">
+          <article class="room-card" data-reveal>
+            <div class="room-card-media">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=700&q=70" width="700" height="525" alt="Deluxe Room with a king bed">
+              <span class="price-tag">from <strong>₹3,299</strong> / night</span>
+            </div>
+            <div class="room-card-body">
+              <div class="room-meta">
+                <span><svg viewBox="0 0 24 24"><path d="M3 18V8m0 6h18m0 4v-6a3 3 0 0 0-3-3h-8v6"/><circle cx="6.5" cy="11" r="1.5"/></svg>King bed</span>
+                <span><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M16 5a3 3 0 0 1 0 6m2 9a6 6 0 0 0-3-5.2"/></svg>Up to 3 guests</span>
+              </div>
+              <h3>Deluxe Room</h3>
+              <p>A window seat for slow mornings, a proper desk and a king bed dressed in crisp cotton.</p>
+              <a class="link-arrow" href="rooms.html#deluxe">View Details</a>
+            </div>
+          </article>
+
+          <article class="room-card" data-reveal style="--d:.1s">
+            <div class="room-card-media">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=700&q=70" width="700" height="525" alt="Executive Room with lounge seating">
+              <span class="price-tag">from <strong>₹4,199</strong> / night</span>
+            </div>
+            <div class="room-card-body">
+              <div class="room-meta">
+                <span><svg viewBox="0 0 24 24"><path d="M3 18V8m0 6h18m0 4v-6a3 3 0 0 0-3-3h-8v6"/><circle cx="6.5" cy="11" r="1.5"/></svg>King bed</span>
+                <span><svg viewBox="0 0 24 24"><path d="M4 10h16M6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3M5 10v8m14-8v8M3 14h18"/></svg>Breakfast included</span>
+              </div>
+              <h3>Executive Room</h3>
+              <p>Built for longer stays, with a lounge corner, espresso machine and breakfast on us.</p>
+              <a class="link-arrow" href="rooms.html#executive">View Details</a>
+            </div>
+          </article>
+
+          <article class="room-card" data-reveal style="--d:.2s">
+            <div class="room-card-media">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=700&q=70" width="700" height="525" alt="Family Suite with a sitting area">
+              <span class="price-tag">from <strong>₹5,999</strong> / night</span>
+            </div>
+            <div class="room-card-body">
+              <div class="room-meta">
+                <span><svg viewBox="0 0 24 24"><path d="M3 18V8m0 6h18m0 4v-6a3 3 0 0 0-3-3h-8v6"/><circle cx="6.5" cy="11" r="1.5"/></svg>King + 2 singles</span>
+                <span><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0M16 5a3 3 0 0 1 0 6m2 9a6 6 0 0 0-3-5.2"/></svg>Up to 4 guests</span>
+              </div>
+              <h3>Family Suite</h3>
+              <p>A separate sitting area and room for everyone &mdash; the easiest way to travel together.</p>
+              <a class="link-arrow" href="rooms.html#family">View Details</a>
+            </div>
+          </article>
+        </div>
+        <p class="swipe-hint">Swipe to see more rooms</p>
+      </div>
+    </section>
+
+    <!-- Amenities -->
+    <section class="section bg-dark" id="amenities">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Amenities</p>
+          <h2>Everything taken care of</h2>
+          <p>The essentials, done properly &mdash; so the only thing left to plan is your day.</p>
+        </div>
+        <div class="amenities" data-reveal>
+          <div class="amenity">
+            <svg viewBox="0 0 48 48"><path d="M6 19a26 26 0 0 1 36 0M11.5 25a18 18 0 0 1 25 0M17 31a10 10 0 0 1 14 0"/><circle cx="24" cy="37" r="1.8"/></svg>
+            <h3>Free Wi-Fi</h3>
+            <p>Fast, reliable internet in every room and public space.</p>
+          </div>
+          <div class="amenity">
+            <svg viewBox="0 0 48 48"><path d="M8 34h32M10 34a14 14 0 0 1 28 0M24 20v-3M21 17h6M5 39h38"/></svg>
+            <h3>Room Service</h3>
+            <p>Meals and refreshments brought to your door, day or night.</p>
+          </div>
+          <div class="amenity">
+            <svg viewBox="0 0 48 48"><path d="M15 6v13a4 4 0 0 1-8 0V6M11 6v36M33 42V6c-4 2-6 7-6 13s2 8 6 8"/></svg>
+            <h3>Restaurant</h3>
+            <p>An all-day dining room serving regional and continental plates.</p>
+          </div>
+          <div class="amenity">
+            <svg viewBox="0 0 48 48"><rect x="7" y="7" width="34" height="34" rx="4"/><path d="M19 34V15h7a6 6 0 0 1 0 12h-7"/></svg>
+            <h3>Parking</h3>
+            <p>Secure on-site parking for guests, free of charge.</p>
+          </div>
+          <div class="amenity">
+            <svg viewBox="0 0 48 48"><path d="M24 5v38M8 14.5l32 19M8 33.5l32-19M19 8l5 4 5-4M19 40l5-4 5 4M7 20l6-1.5L11.5 13M41 28l-6 1.5 1.5 5.5M7 28l6 1.5-1.5 5.5M41 20l-6-1.5 1.5-5.5"/></svg>
+            <h3>AC Rooms</h3>
+            <p>Individually controlled air conditioning in every room.</p>
+          </div>
+          <div class="amenity">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M24 13v11l7 5"/></svg>
+            <h3>24/7 Front Desk</h3>
+            <p>Someone is always here &mdash; for early arrivals and late questions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Walkthrough: scroll-driven tour -->
+    <section class="tour" id="tour" aria-label="Hotel walkthrough">
+      <div class="tour-sticky">
+        <div class="tour-scene" data-scene="0">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1400&q=65" srcset="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=60 800w, https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1400&q=65 1400w" sizes="100vw" width="1400" height="933" alt="Hotel exterior">
+        </div>
+        <div class="tour-scene" data-scene="1">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1400&q=65" srcset="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=800&q=60 800w, https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1400&q=65 1400w" sizes="100vw" width="1400" height="933" alt="Hotel lobby">
+        </div>
+        <div class="tour-scene" data-scene="2">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1400&q=65" srcset="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=60 800w, https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1400&q=65 1400w" sizes="100vw" width="1400" height="933" alt="Guest room interior">
+        </div>
+        <div class="tour-scene" data-scene="3">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=65" srcset="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=60 800w, https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=65 1400w" sizes="100vw" width="1400" height="933" alt="Bed with soft linen">
+        </div>
+        <div class="tour-scene" data-scene="4">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1400&q=65" srcset="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=800&q=60 800w, https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1400&q=65 1400w" sizes="100vw" width="1400" height="933" alt="Fresh towels in the bathroom">
+        </div>
+        <div class="tour-scene" data-scene="5">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1517840901100-8179e982acb7?auto=format&fit=crop&w=1400&q=65" srcset="https://images.unsplash.com/photo-1517840901100-8179e982acb7?auto=format&fit=crop&w=800&q=60 800w, https://images.unsplash.com/photo-1517840901100-8179e982acb7?auto=format&fit=crop&w=1400&q=65 1400w" sizes="100vw" width="1400" height="933" alt="Restaurant dining room">
+        </div>
+
+        <div class="tour-intro" id="tourIntro">
+          <div>
+            <p class="eyebrow center" style="color:var(--gold-light)">The walkthrough</p>
+            <h2>Step inside<br>Hotel Kabir</h2>
+            <p>Scroll to walk from the front door to your room and down to dinner &mdash; or press play.</p>
+            <span class="scroll-cue">Scroll</span>
+          </div>
+        </div>
+
+        <div class="tour-top container" aria-hidden="true">
+          <span class="rec">Walkthrough</span>
+          <span id="tourChapter">01 / 06</span>
+        </div>
+
+        <div class="tour-captions">
+          <div class="tour-caption" data-caption="0"><span class="num">01 &mdash; Arrival</span><h3>The front door</h3><p>A covered drop-off, a porter for your bags and a cold drink before you&rsquo;ve even checked in.</p></div>
+          <div class="tour-caption" data-caption="1"><span class="num">02 &mdash; The lobby</span><h3>A lobby to linger in</h3><p>Low lamps, deep sofas and a front desk that never closes. Check-in takes a few minutes, not a queue.</p></div>
+          <div class="tour-caption" data-caption="2"><span class="num">03 &mdash; Upstairs</span><h3>Your room</h3><p>Quiet corridors open onto calm, uncluttered rooms with air conditioning you control.</p></div>
+          <div class="tour-caption" data-caption="3"><span class="num">04 &mdash; Rest</span><h3>The bed, properly</h3><p>Firm mattresses, soft cotton and blackout curtains. Wake up when you want to.</p></div>
+          <div class="tour-caption" data-caption="4"><span class="num">05 &mdash; Refresh</span><h3>Bath &amp; linen</h3><p>Hot water on tap, fluffy towels changed daily and toiletries that smell of something real.</p></div>
+          <div class="tour-caption" data-caption="5"><span class="num">06 &mdash; Dining</span><h3>Dinner downstairs</h3><p>End the day in the dining room &mdash; or have it brought up to you. Your call.</p></div>
+        </div>
+
+        <a class="tour-skip" href="#gallery">Skip tour</a>
+
+        <div class="tour-controls">
+          <div class="container">
+            <button class="tour-play" id="tourPlay" aria-label="Play walkthrough">
+              <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>
+              <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+            </button>
+            <div class="tour-track" id="tourTrack">
+              <button class="tour-seg" aria-label="Go to Arrival"><i></i></button>
+              <button class="tour-seg" aria-label="Go to The lobby"><i></i></button>
+              <button class="tour-seg" aria-label="Go to Your room"><i></i></button>
+              <button class="tour-seg" aria-label="Go to The bed"><i></i></button>
+              <button class="tour-seg" aria-label="Go to Bath and linen"><i></i></button>
+              <button class="tour-seg" aria-label="Go to Dining"><i></i></button>
+            </div>
+            <span class="tour-time" id="tourTime">0:00 / 1:30</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Gallery</p>
+          <h2>A look around</h2>
+        </div>
+      </div>
+      <div class="gallery" data-reveal>
+        <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=600&q=65" width="600" height="800" alt="Hotel interior"><figcaption>The lobby</figcaption></figure>
+        <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=600&q=65" width="600" height="800" alt="Restaurant tables"><figcaption>The restaurant</figcaption></figure>
+        <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=65" width="600" height="800" alt="Bedroom detail"><figcaption>Deluxe Room</figcaption></figure>
+        <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=65" width="600" height="800" alt="A plated dish"><figcaption>From the kitchen</figcaption></figure>
+        <figure><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1584132915807-fd1f5fbc078f?auto=format&fit=crop&w=600&q=65" width="600" height="800" alt="Bathroom with fresh towels"><figcaption>Bath &amp; linen</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=1400&q=55" width="1400" height="933" alt="">
+      <div class="container" data-reveal>
+        <p class="eyebrow center">Reservations</p>
+        <h2>Plan your stay</h2>
+        <p>Pick your dates, choose a room and you&rsquo;re done in under a minute. Prefer to talk it through? Give us a call.</p>
+        <div class="cta-actions">
+          <a class="btn btn-gold btn-lg" href="booking.html">Book Now</a>
+          <button class="btn btn-outline-light btn-lg" data-contact="call">Call Us</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/home.js" defer></script>
+</body>
+</html>
